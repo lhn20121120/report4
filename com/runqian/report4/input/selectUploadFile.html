@@ -1,0 +1,31 @@
+<!-- 上载文件的界面 -->
+<script language=javascript>
+        //var __upload_font_f = "宋体";
+        //var __upload_AA = "请选择上载文件名：";
+        //var __upload_BB = "上载";
+        //var __upload_CC = "下载";
+        //var __upload_DD = "删除";
+        _initSelectUploadFile();
+        document.body.bgcolor = "#ffe4e1";
+</script>
+<table id=winsize width=380 cellspacing=10>
+	<tr><td style="FONT-SIZE: 14px; COLOR: royalblue;">
+		<script language=javascript>document.write( __upload_AA );</script>
+	</td></tr>
+	<tr><td><input type=file name=file1 style="width:350px" size=40></td></tr>
+	<tr><td>
+		<!--  下面是上载文件类型说明的字体样式  -->
+		<div id=typeDiv style="font-size:12px;"></div>
+	</td></tr>
+	<tr><td align=center>
+		<INPUT type=button id=upbtn  style="width:60px">
+		<span id=downloadDiv><input type=button id=downbtn style="width:60px"></span>
+		<INPUT type=button id=delbtn  style="width:60px">
+	</td></tr>
+</table>
+<script language=javascript>
+	document.getElementById( "upbtn" ).value = __upload_BB;
+	document.getElementById( "downbtn" ).value = __upload_CC;
+	document.getElementById( "delbtn" ).value = __upload_DD;
+</script>
+

@@ -1,0 +1,30 @@
+<!-- 导出Excel文件的界面 -->
+<script language=javascript>
+        //var _excel_font_f = "宋体";
+        //var _excel_EE = "请选择分页方式：";
+        //var _excel_FF = "不分页";
+        //var _excel_GG = "分页";
+        //var _excel_HH = "确定";
+        //var _excel_JJ = "是否导出公式";
+        _initExcelPageStyle();
+        document.body.bgcolor = "#ffe4e1";
+</script>
+<table id=winsize width=230>
+	<tr><td colspan=2 style="FONT-SIZE: 14px; COLOR: royalblue;">
+	<script language=javascript>document.write( _excel_EE );</script>
+	</td></tr>
+	<tr style="font-size:14px;color:forestgreen;"><td>
+	<INPUT onclick="pageStyle=0;extFormula.disabled=false;" type=radio CHECKED name=pageStyle>&nbsp;<script language=javascript>document.write( _excel_FF );</script>
+	</td><td>
+	<INPUT onclick="pageStyle=1;formula=0;extFormula.disabled=true;extFormula.checked=false;" type=radio name=pageStyle>&nbsp;<script language=javascript>document.write( _excel_GG );</script>
+	</td></tr>
+	<tr><td colspan=2 style="padding-top:10px;font-size:14px;color:forestgreen;">
+	<INPUT type=checkbox id=extFormula onclick="if( this.checked ) formula=1;else formula=0;">&nbsp;<script language=javascript>document.write( _excel_JJ );</script>
+	</td></tr>
+	<tr><td colspan=2 align=center style="padding-top:12px">
+	<INPUT onclick=myOk() type=button ID="B_HH" style="width:60px;height:22px">
+	</td></tr>
+</table>
+<script language=javascript>
+	document.getElementById( "B_HH" ).value = _excel_HH;
+</script>
