@@ -26,9 +26,9 @@ var __TT = "无法保存文件";
 
 
 function clearValueFormat(cell ) {
-		value = cell.value;
+		value = cell.getAttribute("value");
 		
-		if( cell.digits != null ) {
+		if( cell.getAttribute( "digits" )!= null&&cell.getAttribute( "digits" )!= undefined ) {
 			
 			var i = 0;
 			while( i < value.length ) {
@@ -46,8 +46,8 @@ function clearValueFormat(cell ) {
 			}
 		}
 		cell.setAttribute( "value", value + "" );
-		cell.textContent = value;
-		cell.innerHTML = value;
+		//cell.textContent = value;
+		//cell.innerHTML = value;
 		return value;
 	}
 	
@@ -71,7 +71,8 @@ function _formatData( table ) {
 				if( ! isNaN( value ) ) {
 					value = value.toFixed( parseInt( currCell.getAttribute( "digits" ) ) );
 					currCell.setAttribute( "value", value + "" );
-					currCell.textContent = value;
+					//currCell.textContent = value;
+					//currCell.innerHTML = value;
 					//alert(currCell.textContent);
 					
 				}
@@ -80,26 +81,24 @@ function _formatData( table ) {
 	}
 }
 
+
 function _formatCalcValue( cell ) {
 	if( cell.getAttribute( "format" ) != null ) {
 		var xmlhttp;
-		if (window.XMLHttpRequest)
-		{
-			//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+		if (window.XMLHttpRequest){
 			xmlhttp=new XMLHttpRequest();
 		}
-		else
-		{
-			// IE6, IE5 浏览器执行代码
+		else{	
 			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 		}
-		var table = _lookupTable( cell );
-		xmlhttp.Open( "POST", table.getAttribute( "ajaxUrl" ) + "?action=27&value=" + cell.getAttribute( "value" ) + "&format=" + cell.getAttribute( "format" ), false );
-		xmlhttp.Send( " " );
-		try { 			
-	   		cell.textContent = xmlhttp.responseText;
-			cell.innerHTML =  xmlhttp.responseText;
-			cell.value = xmlhttp.responseText;
+		try {
+			var table = _lookupTable( cell );
+			
+			xmlhttp.open( "POST", table.getAttribute( "ajaxUrl" ) + "?action=27&value=" + cell.getAttribute( "value" ) + "&format=" + cell.getAttribute( "format" ), false );					
+			xmlhttp.send(null);					
+	   		//cell.textContent = xmlhttp.responseText;
+			//cell.innerHTML =  xmlhttp.responseText;
+			cell.setAttribute( "value", xmlhttp.responseText + "" );
 		} catch( exception ) {
 			 txt="There was an error on this page.\n\n";
 			 txt+="Error description: " + exception.message + "\n\n";
@@ -108,13 +107,13 @@ function _formatCalcValue( cell ) {
 		}
 	}
 	if( cell.getAttribute( "digits" ) != null ) {
-		var value = parseFloat( cell.getAttribute( "value" ) );
+		var value = _parseValue(cell) ;
 		if( ! isNaN( value ) ) {
-			value = value.toFixed( parseInt( cell.getAttribute( "digits" ) ) );
+			//value = value.toFixed( parseInt( cell.getAttribute( "digits" ) ) );
 			cell.setAttribute( "value", value + "" );
 			cell.textContent = value;
 			cell.innerHTML = value;
-			cell.value = value
+			//cell.value = value
 		}
 	}
 }
