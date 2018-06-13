@@ -1,28 +1,28 @@
 var autoCalcOnlyOnSubmit = false;
 // BEGIN
-var __AA = "ï¿½ï¿½";
-var __BB = "ï¿½ï¿½ï¿½ï¿½";
-var __DD = "ï¿½ï¿½Ôªï¿½ï¿½";
-var __EE = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½";
-var __CC = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½";
-var __FF = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½";
-var __GG = "ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éµï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½";
-var __HH = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½Emailï¿½ï¿½Ö·ï¿½ï¿½";
-var __II = "ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½Òªï¿½ï¿½";
-var __JJ = "ï¿½Ø¼ï¿½ï¿½Ö¶ï¿½È¡Öµï¿½ï¿½Ôªï¿½ï¿½";
-var __KK = "ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
-var __LL = "ï¿½Ø¼ï¿½ï¿½Ö¶Îµï¿½Ôªï¿½ï¿½";
-var __MM = "Î´ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½";
-var __NN = "ï¿½Ö¶ï¿½È¡Öµï¿½ï¿½Ôªï¿½ï¿½";
-var __OO = "ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
-var __PP = "Ë«ï¿½ï¿½ï¿½ï¿½ï¿½Ø»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½";
-var __QQ = "switchCaseï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì«ï¿½Ù£ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½4ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½Ê½Îªï¿½ï¿½\n\nswitchCase( ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, Öµ1, ï¿½ï¿½ï¿½ï¿½Öµ1, [Öµ2, ï¿½ï¿½ï¿½ï¿½Öµ2, ......]È±Ê¡ï¿½ï¿½ï¿½ï¿½Öµ )";
-var __RR = "switchCaseï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ÎªË«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½Ê½Îªï¿½ï¿½\n\nswitchCase( ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, Öµ1, ï¿½ï¿½ï¿½ï¿½Öµ1, [Öµ2, ï¿½ï¿½ï¿½ï¿½Öµ2, ......]È±Ê¡ï¿½ï¿½ï¿½ï¿½Öµ )";
-var __SS = "ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½Â·ï¿½ï¿½";
-var __TT = "ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½";
+var __AA = "Çë";
+var __BB = "ÇëÔÚ";
+var __DD = "µ¥Ôª¸ñ";
+var __EE = "ÊäÈëÊý×ÖÖµ£¡";
+var __CC = "ÊäÈëÕûÊýÖµ£¡";
+var __FF = "ÊäÈëÓÐÐ§µÄÈÕÆÚ£¡";
+var __GG = "ÊäÈëÈ«ÊÇÓÉÊý×Ö×é³ÉµÄ×Ö·û´®£¡";
+var __HH = "ÊäÈëÕýÈ·µÄEmailµØÖ·£¡";
+var __II = "Êý¾Ý²»Âú×ãÓÐÐ§ÐÔÒªÇó£¡";
+var __JJ = "¹Ø¼ü×Ö¶ÎÈ¡Öµµ¥Ôª¸ñ";
+var __KK = "²»´æÔÚ£¡Çë¼ì²é¸üÐÂÉèÖÃ";
+var __LL = "¹Ø¼ü×Ö¶Îµ¥Ôª¸ñ";
+var __MM = "Î´ÊäÈëÖµ£¡";
+var __NN = "×Ö¶ÎÈ¡Öµµ¥Ôª¸ñ";
+var __OO = "²»´æÔÚ£¡Çë¼ì²é¸üÐÂÉèÖÃ";
+var __PP = "Ë«»÷ÉÏÔØ»òÏÂÔØÎÄ¼þ";
+var __QQ = "switchCaseº¯Êý²ÎÊýÌ«ÉÙ£¬ÖÁÉÙÓ¦ÓÐ4¸ö²ÎÊý£¬ÕýÈ·¸ñÊ½Îª£º\n\nswitchCase( ±äÁ¿»ò³£Á¿, Öµ1, ·µ»ØÖµ1, [Öµ2, ·µ»ØÖµ2, ......]È±Ê¡·µ»ØÖµ )";
+var __RR = "switchCaseº¯Êý²ÎÊý¸öÊý´íÎó£¬Ó¦ÎªË«Êý£¬ÕýÈ·¸ñÊ½Îª£º\n\nswitchCase( ±äÁ¿»ò³£Á¿, Öµ1, ·µ»ØÖµ1, [Öµ2, ·µ»ØÖµ2, ......]È±Ê¡·µ»ØÖµ )";
+var __SS = "ÊäÈëÎÄ¼þÂ·¾¶";
+var __TT = "ÎÞ·¨±£´æÎÄ¼þ";
 
 
-
+// END
 
 
 function clearValueFormat(cell ) {
@@ -33,7 +33,7 @@ function clearValueFormat(cell ) {
 			var i = 0;
 			while( i < value.length ) {
 				var ch = value.charAt( i );
-				if( ch == "," || ch == "$" || ch == "%" || ch == "ï¿½ï¿½" ) {
+				if( ch == "," || ch == "$" || ch == "%" || ch == "£¤" ) {
 					
 					value = value.substring( 0, i ) + value.substring( i + 1 );
 					
@@ -121,9 +121,9 @@ function _formatCalcValue( cell ) {
 function _initInput( table ) {
 	table.currEditor = null;
 	document.body.onkeydown = function(event){ 
-	var ev = event || window.event;//ï¿½ï¿½È¡eventï¿½ï¿½ï¿½ï¿½  
-    var obj = ev.target || ev.srcElement;//ï¿½ï¿½È¡ï¿½Â¼ï¿½Ô´  
-    var t = obj.type || obj.getAttribute('type');//ï¿½ï¿½È¡ï¿½Â¼ï¿½Ô´ï¿½ï¿½ï¿½ï¿½  	 
+	var ev = event || window.event;//»ñÈ¡event¶ÔÏó  
+    var obj = ev.target || ev.srcElement;//»ñÈ¡ÊÂ¼þÔ´  
+    var t = obj.type || obj.getAttribute('type');//»ñÈ¡ÊÂ¼þÔ´ÀàÐÍ  	 
 	if(  ev == 8 && !( event.target.tagName == "INPUT" && ( t == "text" ||t == "file" || t == "password" ) ) && t != "TEXTAREA" ) return false;};
     _initInputVar();//init
 }
@@ -139,7 +139,7 @@ function _clearValueFormat( cell, value ) {
 		var i = 0;
 		while( i < value.length ) {
 			var ch = value.charAt( i );
-			if( ch == "," || ch == "$" || ch == "%" || ch == "ï¿½ï¿½" ) {
+			if( ch == "," || ch == "$" || ch == "%" || ch == "£¤" ) {
 				value = value.substring( 0, i ) + value.substring( i + 1 );
 				if( ch == "%" ) {
 					value = value / 100.0;
@@ -255,7 +255,7 @@ function _submitEditor2( table ) {
 function _setEditingValue( editingObj, value, disp ) {
 	if( editingObj.tagName == "TD" ) {
 		try{ value = _clearValueFormat( editingObj, value ); }catch(ex){}
-		if( editingObj.childNodes[0] && editingObj.childNodes[0].tagName == "INPUT" ) {    //Ëµï¿½ï¿½ï¿½Ç¿ï¿½×¢ï¿½ï¿½à¼­ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+		if( editingObj.childNodes[0] && editingObj.childNodes[0].tagName == "INPUT" ) {    //ËµÃ÷ÊÇ¿É×¢²á±à¼­·ç¸ñÎª²ÎÊý±íµ¥µÄµ¥Ôª¸ñÉèÖÃÖµ
 			editingObj.childNodes[0].value = value;
 		}
 		else {
@@ -311,7 +311,7 @@ function _getEditingValue( editingObj ) {
 		return hiddenInput.value;
 	}
 	else {
-		if( editingObj.childNodes[0] && editingObj.childNodes[0].tagName == "INPUT" ) {    //Ëµï¿½ï¿½ï¿½Ç¿ï¿½×¢ï¿½ï¿½à¼­ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½Ôªï¿½ï¿½Öµ
+		if( editingObj.childNodes[0] && editingObj.childNodes[0].tagName == "INPUT" ) {    //ËµÃ÷ÊÇ¿É×¢²á±à¼­·ç¸ñÈ¡²ÎÊý±íµ¥µÄµ¥Ôª¸ñÖµ
 			return editingObj.childNodes[0].value;
 		}
 		return editingObj.getAttribute( "value" );
@@ -422,7 +422,7 @@ function _hideEditor( event ) {
 		tree_hide();
 	}catch( e ) {}
 	var hide = document.body.getAttribute( "_jsHideFuncs" );
-	if( hide != null ) {   //ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½à¼­ï¿½Ø¼ï¿½
+	if( hide != null ) {   //Òþ²Ø×Ô¶¨Òå±à¼­¿Ø¼þ
 		for( var i = 0; i < hide.length; i++ ) {
 			try { eval( hide[i] ); }catch( e ) {}
 		}
@@ -467,7 +467,7 @@ function _setRowColBackColor( cell ) {
 }
 
 function  _setTableEditingFlag( table, cell, rowbkcolor, colbkcolor ) {
-	if( table.currCell != null ) {   //ï¿½ï¿½Ô­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄ±ï¿½ï¿½ï¿½É«ï¿½Ö¸ï¿½
+	if( table.currCell != null ) {   //½«Ô­¹â±êËùÔÚÐÐÁÐµÄ±³¾°É«»Ö¸´
 		var c = table.currCell;
 		if( rowbkcolor != "" ) {
 			var r = c.parentNode;
@@ -489,7 +489,7 @@ function  _setTableEditingFlag( table, cell, rowbkcolor, colbkcolor ) {
 			}
 		}
 	}
-	if( cell != null ) {    //ï¿½ï¿½ï¿½ï¿½ï¿½Â¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄ±ï¿½ï¿½ï¿½É«
+	if( cell != null ) {    //ÉèÖÃÐÂ¹â±êËùÔÚÐÐÁÐµÄ±³¾°É«
 		if( rowbkcolor != "" ) {
 			var r = cell.parentNode;
 			for( var i = 0; i < r.cells.length; i++ ) {
@@ -652,7 +652,7 @@ function _lookupEditor( table, cell ) {
 				editor = document.getElementById( table.id + "_editBox" );
 			}
 			var tc = cell.textContent;
-			var re = String.fromCharCode( 160 );    //ï¿½ï¿½Ó¦&nbsp;
+			var re = String.fromCharCode( 160 );    //¶ÔÓ¦&nbsp;
 			while( tc.indexOf( re ) >= 0 ) tc = tc.replace( re, " " );
 			editor.value = tc;
 			editor.oldValue = tc;
@@ -836,7 +836,7 @@ function _lookupNextCell( cell, flag ) {
 	return nextCell;
 }
 
-function _getMergeCell( table, row, col ) {  //ï¿½ï¿½ï¿½Ø°ï¿½ï¿½ï¿½(row,col)ï¿½Äµï¿½Ôªï¿½ï¿½ï¿½Ï²ï¿½ï¿½ï¿½
+function _getMergeCell( table, row, col ) {  //·µ»Ø°üº¬(row,col)µÄµ¥Ôª¸ñ»òºÏ²¢¸ñ
 	for( var i = row - 1; i >= 0; i-- ) {
 		var r = table.rows[i];
 		for( var j = 0; j < r.cells.length; j++ ) {
@@ -887,7 +887,7 @@ function StringBuffer(){
 function _submitTable( table, resultInfoPage ) {
 	if( ! _submitEditor( table ) ) return false;
 	if( eval( table.id + "_validOnSubmit" ) ) {
-		if( ! eval( table.id + "_checkValid()" ) ) {  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½Ô¼ï¿½ï¿½
+		if( ! eval( table.id + "_checkValid()" ) ) {  //Êý¾ÝÓÐÐ§ÐÔ¼ì²é
 			try {
 				if( batImport ) {
 					parent.getResultInfo( "error", __II );
@@ -1042,7 +1042,7 @@ function _uploadPrompt( display, event ) {
 	if( promptBox == null ) {
 		var tmpDiv = document.createElement( "div" );
 		document.body.appendChild( tmpDiv );
-		tmpDiv.innerHTML = "<table id=___promptBox style=\"display:none; BACKGROUND-COLOR: mistyrose; BORDER: blue 1px solid; FONT-FAMILY: ï¿½ï¿½ï¿½ï¿½; FONT-SIZE: 13px; POSITION: absolute;\">" +
+		tmpDiv.innerHTML = "<table id=___promptBox style=\"display:none; BACKGROUND-COLOR: mistyrose; BORDER: blue 1px solid; FONT-FAMILY: ËÎÌå; FONT-SIZE: 13px; POSITION: absolute;\">" +
 											"<tr><td align=middle>" + __PP + "</td></tr></table>";
 		var promptBox = document.getElementById( "___promptBox" );
 	}
@@ -1211,7 +1211,7 @@ function _getScriptFunctions() {
         html += "\tvar __RR ;\n";
         html += "\tvar __SS ;\n";
         html += "\tvar __TT ;\n";
-        html += _initInputVar.toString() + "\n";//ï¿½æ»»ï¿½ï¿½ï¿½ï¿½
+        html += _initInputVar.toString() + "\n";//Ìæ»»±äÁ¿
 
 	html += _initInput.toString() + "\n";
 	html += _getReportName.toString() + "\n";
@@ -1258,7 +1258,7 @@ function _getScriptFunctions() {
         html += "\tvar RQS_arrow ;\n";
         html += "\tvar RQS_all ;\n";
         html += "\tvar RQS_ok ;\n";
-        html += _initSelectJsVar.toString() + "\n";//ï¿½æ»»ï¿½ï¿½ï¿½ï¿½
+        html += _initSelectJsVar.toString() + "\n";//Ìæ»»±äÁ¿
 		html += "\t\tif( RQS_VAR == null ) {\n";
 		html += "\t\t\tvar RQS_VAR = new Object();\n";
 		html += "\t\t\tRQS_VAR.SelectList = new Array();\n";
@@ -1334,7 +1334,7 @@ function _getScriptFunctions() {
                 html += "\tvar __close ;\n";
                 html += "\tvar __fontFamily ;\n";
 
-                html += _initCalJsVar.toString() + "\n";//ï¿½æ»»ï¿½ï¿½ï¿½ï¿½
+                html += _initCalJsVar.toString() + "\n";//Ìæ»»±äÁ¿
 		html += _createRunqianCalendar.toString() + "\n";
 		html += _createIframeSyntax.toString() + "\n";
 		html += _showCalendar.toString() + "\n";
@@ -1413,7 +1413,7 @@ function _saveToLocal( table, name ) {
 	html.append( "</body>\n</html>" );
 	try {
 		var fso = new ActiveXObject( "Scripting.FileSystemObject" );
-		//if( ! eval( table.id + "_checkValid()" ) ) return;  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½Ô¼ï¿½ï¿½
+		//if( ! eval( table.id + "_checkValid()" ) ) return;  //Êý¾ÝÓÐÐ§ÐÔ¼ì²é
 		var fileDialog;
 		try {
 			fileDialog = eval( "_fileDialog" );
@@ -1459,7 +1459,7 @@ function _submitSheets( sheets, resultInfoPage ) {
 	if( ! _submitEditor( document.getElementById( document.getElementById( tabs.getAttribute( "currTab" ) ).getAttribute( "report" ) ) ) ) return;
 	var tables = sheets.getAttribute( "tables" ).split( "," );
 	for( var i = 0; i < tables.length; i++ ) {
-		if( ! eval( tables[i] + "_checkValid()" ) ) {  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½Ô¼ï¿½ï¿½
+		if( ! eval( tables[i] + "_checkValid()" ) ) {  //¸÷±íÊý¾ÝÓÐÐ§ÐÔ¼ì²é
 			try {
 				if( batImport ) {
 					parent.getResultInfo( "error", __II );
@@ -1469,7 +1469,7 @@ function _submitSheets( sheets, resultInfoPage ) {
 		}
 	}
 	try {
-		if( ! eval( sheets.id + "_sheetsValid()" ) ) {   //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½Ô¼ï¿½ï¿½
+		if( ! eval( sheets.id + "_sheetsValid()" ) ) {   //±í¼äÊý¾ÝÓÐÐ§ÐÔ¼ì²é
 			try {
 				if( batImport ) {
 					parent.getResultInfo( "error", __II );
@@ -1478,7 +1478,7 @@ function _submitSheets( sheets, resultInfoPage ) {
 			return;
 		}
 	}catch( exception ) {}
-	try {    //ï¿½Ã»ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½Ô¼ï¿½ï¿½
+	try {    //ÓÃ»§×Ô¶¨ÒåÓÐÐ§ÐÔ¼ì²é
 		if( ! eval( sheets.id + "_userDefineValidScript()" ) ) return;
 	}catch( exception ) {}
 
