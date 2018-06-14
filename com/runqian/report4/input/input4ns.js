@@ -55,7 +55,7 @@ function _parseValue( cell ) {
 	var value=clearValueFormat(cell);
 		 value = parseFloat( value );
 	if( cell.digits != null ) {
-		if( ! isNaN( value ) ) value = parseFloat( value.toFixed( parseInt( cell.digits) ) );
+		if( ! isNaN( value ) ) value = parseFloat( value.toFixed( parseInt( cell.getAttribute( "digits" ) ) ) );
 	}
 	return isNaN( value ) ? 0 : value;
 }
@@ -83,6 +83,17 @@ function _formatData( table ) {
 
 
 function _formatCalcValue( cell ) {
+
+    if( cell.getAttribute( "digits" ) != null ) {
+        var value = _parseValue(cell) ;
+        if( ! isNaN( value ) ) {
+            //value = value.toFixed( parseInt( cell.getAttribute( "digits" ) ) );
+            cell.setAttribute( "value", value + "" );
+            cell.textContent = value;
+            cell.innerHTML = value;
+            //cell.value = value
+        }
+    }
 	if( cell.getAttribute( "format" ) != null ) {
 		var xmlhttp;
 		if (window.XMLHttpRequest){
@@ -96,8 +107,8 @@ function _formatCalcValue( cell ) {
 			
 			xmlhttp.open( "POST", table.getAttribute( "ajaxUrl" ) + "?action=27&value=" + cell.getAttribute( "value" ) + "&format=" + cell.getAttribute( "format" ), false );					
 			xmlhttp.send(null);					
-	   		//cell.textContent = xmlhttp.responseText;
-			//cell.innerHTML =  xmlhttp.responseText;
+	   	cell.textContent = xmlhttp.responseText;
+			cell.innerHTML =  xmlhttp.responseText;
 			cell.setAttribute( "value", xmlhttp.responseText + "" );
 		} catch( exception ) {
 			 txt="There was an error on this page.\n\n";
@@ -106,16 +117,7 @@ function _formatCalcValue( cell ) {
 			 //alert(txt);			
 		}
 	}
-	if( cell.getAttribute( "digits" ) != null ) {
-		var value = _parseValue(cell) ;
-		if( ! isNaN( value ) ) {
-			//value = value.toFixed( parseInt( cell.getAttribute( "digits" ) ) );
-			cell.setAttribute( "value", value + "" );
-			cell.textContent = value;
-			cell.innerHTML = value;
-			//cell.value = value
-		}
-	}
+
 }
 
 function _initInput( table ) {
@@ -924,8 +926,6 @@ function _submitTable( table, resultInfoPage ) {
 			form.backAndRefresh.value = "batImport";
 		}
 	}catch( e ) {}
-	alert(form.action);
-	alert(form.data.value);
 	form.submit();
 	return true;
 }
@@ -996,7 +996,7 @@ function _addEscape( src ) {
 		if( ! isNaN( value ) ) value = parseFloat( value.toFixed( parseInt( cell.getAttribute( "digits" ) ) ) );
 	}
 	return isNaN( value ) ? 0 : value;
-}
+  }
 */
 
 

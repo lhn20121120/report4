@@ -24,10 +24,109 @@ var __TT = "无法保存文件";
 
 // END
 
+function clearValueFormat(cell ) {
+		value = cell.innerHTML;
+		
+		if( cell.digits!= null&&cell.digits!= undefined ) {
+			
+			var i = 0;
+			while( i < value.length ) {
+				var ch = value.charAt( i );
+				if( ch == "," || ch == "$" || ch == "%" || ch == "￥" ) {
+					
+					value = value.substring( 0, i ) + value.substring( i + 1 );
+					
+					if( ch == "%" ) {
+						value = value / 100.0;
+						value = parseFloat( value.toFixed( parseInt( cell.digits ) ) ) + "";
+					}
+				}
+				else i++;
+			}
+		}
+		cell.value=value + "" ;
+		//cell.textContent = value;
+		//cell.innerHTML = value;
+		return value;
+	}
+	
+function _parseValue( cell ) {
+	var value=clearValueFormat(cell);
+		 value = parseFloat( value );
+	if( cell.digits != null ) {
+		if( ! isNaN( value ) ) value = parseFloat( value.toFixed( parseInt( cell.digits) ) );
+	}
+	return isNaN( value ) ? 0 : value;
+}
+
+function _formatData( table ) {
+	if( autoCalcOnlyOnSubmit ) return;
+	for( var row = 0; row < table.rows.length; row++ ) {
+		var currRow = table.rows[ row ];
+		for( var col = 0; col < currRow.cells.length; col++ ) {
+			var currCell = currRow.cells[ col ];
+			if( currCell.digits  != null ) {
+				var value = parseFloat( currCell.value );
+				if( ! isNaN( value ) ) {
+					value = value.toFixed( parseInt( currCell.digits ) );
+					currCell.value= value + "" ;
+					//currCell.textContent = value;
+					//currCell.innerHTML = value;
+					//alert(currCell.textContent);
+					
+				}
+			}
+		}
+	}
+}
+
+
+function _formatCalcValue( cell ) {
+
+    if( cell.getAttribute( "digits" ) != null ) {
+        var value = _parseValue(cell) ;
+        if( ! isNaN( value ) ) {
+            //value = value.toFixed( parseInt( cell.getAttribute( "digits" ) ) );
+            cell.value= value + "";
+            cell.textContent = value;
+            cell.innerHTML = value;
+			cell.setAttribute( "value" ,value) ;
+            //cell.value = value
+        }
+    }
+	if( cell.getAttribute( "format" ) != null ) {
+		var xmlhttp;
+		if (window.XMLHttpRequest){
+			xmlhttp=new XMLHttpRequest();
+		}
+		else{	
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		try {
+			var table = _lookupTable( cell );
+			
+			xmlhttp.open( "POST", table.getAttribute( "ajaxUrl" ) + "?action=27&value=" + cell.getAttribute( "value" ) + "&format=" + cell.getAttribute( "format" ), false );					
+			xmlhttp.send(null);					
+	   	cell.textContent = xmlhttp.responseText;
+			cell.innerHTML =  xmlhttp.responseText;
+			cell.value= xmlhttp.responseText + "" ;
+		} catch( exception ) {
+			 txt="There was an error on this page.\n\n";
+			 txt+="Error description: " + exception.message + "\n\n";
+			 txt+="Click OK to continue.\n\n";
+			 //alert(txt);			
+		}
+	}
+
+}
 function _initInput( table ) {
 	table.currEditor = null;
-	document.body.onkeydown = function(){ if( event.keyCode == 8 && !( event.srcElement.tagName == "INPUT" && ( event.srcElement.type == "text" || event.srcElement.type == "file" || event.srcElement.type == "password" ) ) && event.srcElement.tagName != "TEXTAREA" ) return false;};
-        _initInputVar();//init
+	document.body.onkeydown = function(event){ 
+	var ev = event || window.event;//获取event对象  
+    var obj = ev.target || ev.srcElement;//获取事件源  
+    var t = obj.type || obj.getAttribute('type');//获取事件源类型  	 
+	if(  ev == 8 && !( event.target.tagName == "INPUT" && ( t == "text" ||t == "file" || t == "password" ) ) && t != "TEXTAREA" ) return false;};
+    _initInputVar();//init
 }
 
 function _getReportName( table ) {
@@ -910,75 +1009,7 @@ function _addEscape( src ) {
 	return isNaN( value ) ? 0 : value;
 }*/
 
-function clearValueFormat(cell ) {
-		value = cell.value;
-		if( cell.digits != null ) {
-			
-			var i = 0;
-			while( i < value.length ) {
-				var ch = value.charAt( i );
-				if( ch == "," || ch == "$" || ch == "%" || ch == "￥" ) {
-					
-					value = value.substring( 0, i ) + value.substring( i + 1 );
-					
-					if( ch == "%" ) {
-						value = value / 100.0;
-						value = parseFloat( value.toFixed( parseInt( cell.digits ) ) ) + "";
-					}
-				}
-				else i++;
-			}
-		}
-		return value;
-	}
-	
-function _parseValue( cell ) {
-	var value=clearValueFormat(cell);
-		 value = parseFloat( value );
-	if( cell.digits != null ) {
-		if( ! isNaN( value ) ) value = parseFloat( value.toFixed( parseInt( cell.digits) ) );
-	}
-	return isNaN( value ) ? 0 : value;
-}
 
-
-function _formatData( table ) {
-	if( autoCalcOnlyOnSubmit ) return;
-	for( var row = 0; row < table.rows.length; row++ ) {
-		var currRow = table.rows[ row ];
-		for( var col = 0; col < currRow.cells.length; col++ ) {
-			var currCell = currRow.cells[ col ];
-			if( currCell.digits != null ) {
-				var value = parseFloat( currCell.value );
-				if( ! isNaN( value ) ) {
-					value = value.toFixed( parseInt( currCell.digits ) );
-					//currCell.value = value + "";
-					//currCell.innerText = value;
-					currCell.setAttribute( "value", value + "" );
-				}
-			}
-		}
-	}
-}
-
-function _formatCalcValue( cell ) {
-	if( cell.format != null ) {
-		var xmlhttp = new ActiveXObject( "Microsoft.XMLHTTP" );
-		var table = _lookupTable( cell );
-		xmlhttp.Open( "POST", table.ajaxUrl + "?action=27&value=" + cell.value + "&format=" + cell.format, false );
-		xmlhttp.Send( " " );
-		try { 
-	   		cell.innerText = xmlhttp.responseText;
-		} catch( exception ) {}
-	}
-	if( cell.digits != null ) {
-		var value = parseFloat( cell.value );
-		if( ! isNaN( value ) ) {
-			value = value.toFixed( parseInt( cell.digits ) );
-			cell.value = value + "";
-		}
-	}
-}
 
 function _uploadFile( url, table, ds, tblName, keyCols, keyCells, origins, fields, valueCells, currCell, ext, rights, fileNameCol ) {
 	if( !_submitEditor( table ) ) return;
